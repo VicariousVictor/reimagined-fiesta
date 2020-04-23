@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer {
+            border: 1px solid red;
+            padding: 2px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px 20px;
+            grid-template-areas: 
+              "one two three"
+              "four four five"
+            ;
+        }
+        .items {
+            border: 1px dotted teal;
+            margin: 1px;
+        }
+        .item8 {
+
+            grid-area: four;
+        }
+        .item7 {
+            grid-area: five;
+        }
+            
+    </style>
+</head>
+<body>
+    <div id='outer'>
+        <div class='items item1'>Item1</div>
+        <div class='items item2'>Item2</div>
+        <div class='items item3'>Item3</div>
+        <div class='items item4'>Item4</div>
+        <div class='items item5'>Item5</div>
+        <div class='items item6'>Item6</div>
+        <div class='items item7'>Item7</div>
+        <div class='items item8'>Item8</div>
+    </div>
+</body>
+</html>
