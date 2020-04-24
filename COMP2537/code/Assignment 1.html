@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    main > * {
+        background-color:white;
+        padding: 10px;
+        }
+
+    main {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "navbar"
+        "section"
+        "aside"
+        "article"
+        "footer";
+    }
+
+    header {grid-area: header;}
+    nav {grid-area: navbar;}
+    section {grid-area: section;}
+    aside {grid-area: aside;}
+    article {grid-area: article;}
+    footer {grid-area: footer;}
+
+    @media (min-width: 1025px) {
+        main {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            "header header header"
+            "navbar navbar navbar"
+            "section section aside"
+            "section section article"
+            "footer footer footer";
+        }
+
+        #headings {
+            display:grid;
+            grid-gap: 0px 30px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "one two";
+        }
+
+        .search {
+            float: right ;
+        }
+    }
+
+
+    @media (min-width: 400px) and (max-width: 1024px) {
+        main {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "header header"
+            "navbar navbar"
+            "section section"
+            "aside aside"
+            "article article"
+            "footer footer";
+        }
+
+        #headings {
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "one two";
+        }
+    }
+
+    @media (max-width: 400px) {
+        main {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+            "header"
+            "navbar"
+            "section"
+            "aside"
+            "article"
+            "footer";
+        }
+
+        .flex {
+            margin:5px 0px 5px;
+            display:flex;
+        } 
+    }
+
+    header {
+        background-color: cornflowerblue;
+    }
+
+    nav {
+        background-color: lightblue;
+    }
+
+    #mainContent{
+        background-color: lavender;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 2%;
+    }
+
+    button {
+        border-radius: 5px;
+    }
+
+</style>
+
+
+<body>
+    <main>
+    <header>
+        <h1>My Project</h1>
+    </header>
+
+    <nav>
+        <button class="flex">Active</button>
+        <a class="flex" href="https://www.google.com">Link</a>
+        <a class="flex" href="https://www.google.com">Link</a>
+        <a class="flex" href="https://www.google.com">Link</a>
+        <a class="flex" href="https://www.google.com">Link</a>
+        <input class="search" type="text" value="Search..."></input>
+        <button class="search" >Search</button>
+    </nav>
+
+    <section>
+        <div id="mainContent">
+        <h2>Main Content</h2>
+        <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing
+            to do: once or twice she had peeped into the book her sister was reading, but it had no pictures
+            or conversations in it, `and what is the use of a book,' thought Alice `without pictures or conversation?'</p>
+        <p>So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid),
+            whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when
+            suddenly a White Rabbit with pink eyes ran close by her.</p>
+        <p>There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the
+            Rabbit say to itself, `Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred
+            to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the
+            Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started
+            to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket,
+            or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was
+            just in time to see it pop down a large rabbit-hole under the hedge. </p>
+        <p>In another moment down went Alice after it, never once considering how in the world she was to get out again.</p>
+        <p>The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice
+            had
+            not a moment to think about stopping herself before she found herself falling down a very deep well.</p>
+
+            <button> Read More </button>
+        </div>    
+
+        <div id="headings">
+
+            <div class="headContent">
+        <h2> heading </h2>
+        <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing
+            to do: once or twice she had peeped into the book her sister was reading, but it had no pictures
+            or conversations in it, `and what is the use of a book,' thought Alice `without pictures or conversation?'</p>
+        <p>So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid),
+            whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when
+            suddenly a White Rabbit with pink eyes ran close by her.</p>
+        <p>There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the
+            Rabbit say to itself, `Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred
+            to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the
+            Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started
+            to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket,
+            or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was
+            just in time to see it pop down a large rabbit-hole under the hedge. </p>
+        <p>In another moment down went Alice after it, never once considering how in the world she was to get out again.</p>
+        <p>The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice
+            had
+            not a moment to think about stopping herself before she found herself falling down a very deep well.</p>
+            </div>
+
+            <div class="headContent">
+            <h2> heading </h2>
+        <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing
+            to do: once or twice she had peeped into the book her sister was reading, but it had no pictures
+            or conversations in it, `and what is the use of a book,' thought Alice `without pictures or conversation?'</p>
+        <p>So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid),
+            whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when
+            suddenly a White Rabbit with pink eyes ran close by her.</p>
+        <p>There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the
+            Rabbit say to itself, `Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred
+            to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the
+            Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started
+            to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket,
+            or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was
+            just in time to see it pop down a large rabbit-hole under the hedge. </p>
+        <p>In another moment down went Alice after it, never once considering how in the world she was to get out again.</p>
+        <p>The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice
+            had
+            not a moment to think about stopping herself before she found herself falling down a very deep well.</p>
+            </div>
+
+            <div class="headContent">
+            <h2> heading </h2>
+        <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing
+            to do: once or twice she had peeped into the book her sister was reading, but it had no pictures
+            or conversations in it, `and what is the use of a book,' thought Alice `without pictures or conversation?'</p>
+        <p>So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid),
+            whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when
+            suddenly a White Rabbit with pink eyes ran close by her.</p>
+        <p>There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the
+            Rabbit say to itself, `Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred
+            to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the
+            Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started
+            to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket,
+            or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was
+            just in time to see it pop down a large rabbit-hole under the hedge. </p>
+        <p>In another moment down went Alice after it, never once considering how in the world she was to get out again.</p>
+        <p>The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice
+            had
+            not a moment to think about stopping herself before she found herself falling down a very deep well.</p>
+        </div>
+
+        <div class="headContent">
+            <h2> Heading </h2>
+        <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing
+            to do: once or twice she had peeped into the book her sister was reading, but it had no pictures
+            or conversations in it, `and what is the use of a book,' thought Alice `without pictures or conversation?'</p>
+        <p>So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid),
+            whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when
+            suddenly a White Rabbit with pink eyes ran close by her.</p>
+        <p>There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the
+            Rabbit say to itself, `Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred
+            to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the
+            Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started
+            to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket,
+            or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was
+            just in time to see it pop down a large rabbit-hole under the hedge. </p>
+        <p>In another moment down went Alice after it, never once considering how in the world she was to get out again.</p>
+        <p>The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice
+            had
+            not a moment to think about stopping herself before she found herself falling down a very deep well.</p>
+            </div>
+        </div>
+    </section>
+
+    <aside>
+        <h2>Sidebar</h1>
+        <h3>Advertisement</h3>
+        <button class="advertisement"> Ad 1</button>
+        <button class="advertisement"> Ad 2</button>
+        <button class="advertisement"> Ad 3</button>
+        <button class="advertisement"> Ad 4</button>
+        <button class="advertisement"> Ad 5</button>
+        <button class="advertisement"> Ad 6</button>
+    </aside>
+
+    <article>
+        <h3>Widget</h3>
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+        </ul>
+    </article>
+    <footer>Footer</footer>
+    </main>
+</body>
+</html>
