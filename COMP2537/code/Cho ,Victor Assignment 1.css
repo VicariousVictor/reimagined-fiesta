@@ -56,6 +56,12 @@ footer {
             "article article";
     }
 
+    .advertisement{
+        display: grid;
+        grid-template-columns: repeat(2, 0fr);
+        grid-gap: 10px;
+    }
+
     .search {
         float: right;
     }
@@ -131,6 +137,7 @@ nav {
     background-color: lavenderblush;
 }
 
-aside a {
-    margin: 10px;
+
+footer {
+    background-color: lemonchiffon;
 }
