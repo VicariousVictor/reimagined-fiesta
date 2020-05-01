@@ -1,4 +1,4 @@
-main>* {
+main > * {
     background-color: white;
     padding: 20px;
 }
@@ -69,7 +69,6 @@ footer {
     .navBar {
         margin: 5px;
     }
-
 }
 
 @media (min-width: 400px) and (max-width: 1024px) {
@@ -98,7 +97,6 @@ footer {
     .navBar {
         margin: 5px;
     }
-
 }
 
 @media (max-width: 400px) {
@@ -119,7 +117,7 @@ footer {
 }
 
 header {
-    background-color: lightblue;
+    background-color: lightyellow;
 }
 
 #mainContent {
