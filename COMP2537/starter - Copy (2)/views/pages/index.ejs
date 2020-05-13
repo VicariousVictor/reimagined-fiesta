@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 2</title>
+</head>
+<body>
+  <div>
+    <fieldset class="todo-list">
+      <legend class="todo-list__title">My Special Todo List</legend>
+      <% for (let i = 0; i < quotes.length;  i++ ) { %>
+      <ul>
+        <li><%= quotes[i].toDoList %></li>
+      </ul>
+      <% } %>
+    </fieldset>
+  </div>
+
+  <div>
+    <input id="delete" type="text" placeholder="delete" value="delete">
+    <button id="delete-button">delete</button>
+  </div>
+
+  <div>    
+    <input id="update" type="text" placeholder="update" value="update">
+    <button id="update-button">Update</button>
+</div>
+       <script src="/main.js"></script>
+</body>
+</html>

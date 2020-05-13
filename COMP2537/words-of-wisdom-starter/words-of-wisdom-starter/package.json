@@ -1,0 +1,20 @@
+{
+  "name": "crud-demo",
+  "version": "1.0.0",
+  "description": "Demo for CST Students",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

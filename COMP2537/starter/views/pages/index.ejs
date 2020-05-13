@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Assignment 2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Assignment 2</title>
 </head>
+
 <body>
-    <form>
-        <fieldset class="todo-list">
-          <legend class="todo-list__title">My Special Todo List</legend>
-          <label class="todo-list__label">
-            <input type="checkbox" name="" id="" />
-            <i class="check"></i>
-            <span>Work on CST Project</span>
-          </label>
-          <label class="todo-list__label">
-            <input type="checkbox" name="" id="" />
-            <i class="check"></i>
-            <span>Watch CST Lectures</span>
-          </label>
-          <label class="todo-list__label">
-            <input type="checkbox" name="" id="" />
-            <i class="check"></i>
-            <span>Cook Dinner</span>
-          </label>
-          <label class="todo-list__label">
-            <input type="checkbox" name="" id="" />
-            <i class="check"></i>
-            <span>Code All Night</span>
-          </label>
-        </fieldset>
-      </form>
-      
+  <div>
+    <fieldset class="todo-list">
+      <legend class="todo-list__title">My Special Todo List</legend>
+      <% for (let i = 0; i < quotes.length;  i++ ) { %>
+      <ul class="textColour">
+        <li><%= quotes[i].toDoList %></li>
+      </ul>
+      <% } %>
+    </fieldset>
+  </div>
+
+  <div class ="textColour">
+    <h3>Enter the todo item you want to modify,</h3>
+    <h3>and the new name you want to give it.</h3>
+    <input id="delete" type="text" placeholder="Delete/Modify" name="Delete"><br>
+    <input id="update" type="text" placeholder="Modify to" name="update"><br>
+    <button id="delete-button">delete</button>
+    <button id="update-button">Update</button>
+  </div>
+  <script src="/main.js"></script>
 </body>
+
 </html>

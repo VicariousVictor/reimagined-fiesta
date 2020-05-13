@@ -27,7 +27,7 @@ body {
 }
 .todo-list .todo-list__label {
   display: -webkit-box;
-  /* display: flex; */
+  display: flex;
   -webkit-box-align: center;
           align-items: center;
   margin: 40px 0;
@@ -93,12 +93,19 @@ body {
 }
 
 #textBox {
+  width: 250px;
+  height: 250px;
   border-radius: 12px;
+  padding:25px;
   background-color:lightslategray;
   border-color: black;
   font-size: large;
 }
 
-.textColour{
-  color: orangered;
+#sendIit {
+  margin: 50px;
+  padding: 5px;
+  border-radius: 12px;
+  height: 50px;
+  width: 100px;
 }
